@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+
+zuul:
+  routes:
+    a:
+    #表示/api-ribbon/开头的会转发到service-ribbon上去,/api-feign/开头的会转发到service-feign上去
+      path: /api-ribbon/**
+      serviceId: service-ribbon
+
+    b:
+      path: /api-feign/**
+      serviceId: service-feign
+    #忽略指定服务
+  ignored-services: service-feign
