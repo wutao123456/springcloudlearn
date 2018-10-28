@@ -23,3 +23,6 @@ eureka:
     enable-self-preservation: false
     #清理失效服务间隔时间
     eviction-interval-timer-in-ms: 3000
+
+
+    #实现高可用的思想是：单机的Eureka注册中心向其他的注册中心注册自己，这样就可以形成互相注册的注册中心
