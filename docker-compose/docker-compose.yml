@@ -1,0 +1,15 @@
+version: '3'
+services:
+  eureka-server:
+    image: 127.0.0.1:5000/eureka-server
+    restart: always #启动失败重试
+    ports:
+      - 8761:8761
+
+  service-hi:
+    image: 127.0.0.1:5000/service-hi
+    restart: always
+    ports:
+      - 8763:8763
+
+
