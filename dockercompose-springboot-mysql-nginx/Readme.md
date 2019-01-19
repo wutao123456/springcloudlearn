@@ -1,4 +1,5 @@
 直接将代码copy到服务器 docker-compose up
+
 1.第一次运行会从maven中央仓库下载一堆东西，会比较慢
 
 2.nginx启动会报错
