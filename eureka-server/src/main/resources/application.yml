@@ -26,3 +26,8 @@ eureka:
 
 
     #实现高可用的思想是：单机的Eureka注册中心向其他的注册中心注册自己，这样就可以形成互相注册的注册中心
+
+security:
+    user:
+      name: root
+      password: 123456
